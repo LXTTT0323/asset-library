@@ -1,0 +1,52 @@
+{
+  "_example": "EXAMPLE CONFIG - replace every keyword and bucket with the user's own interests. Keywords are matched case-insensitively as substrings of title/text.",
+  "include": [
+    "关键词1",
+    "关键词2",
+    "关键词3",
+    "keyword4",
+    "keyword5"
+  ],
+  "exclude": [
+    "排除词1",
+    "排除词2",
+    "排除词3"
+  ],
+  "strong": [
+    "强信号词1",
+    "strong-keyword2"
+  ],
+  "note": "classify.py / prune.py: keep an item when title/text hits an include word and no exclude word; if it hits both, exclude wins unless a 'strong' word also hits. topics-classify.py: buckets are scored by keyword hits on the title (body text only when the title hits nothing); ties go to the lower priority number; the order of the buckets list is the report order.",
+  "buckets": [
+    {
+      "key": "topic-a",
+      "label": "示例主题A(工具与技术)",
+      "priority": 5,
+      "keywords": [
+        "关键词a1",
+        "关键词a2",
+        "keyword a3"
+      ]
+    },
+    {
+      "key": "topic-b",
+      "label": "示例主题B(内容创作)",
+      "priority": 3,
+      "keywords": [
+        "关键词b1",
+        "关键词b2",
+        "keyword b3"
+      ]
+    },
+    {
+      "key": "topic-c",
+      "label": "示例主题C(职业发展)",
+      "priority": 0,
+      "keywords": [
+        "关键词c1",
+        "关键词c2",
+        "keyword c3"
+      ]
+    }
+  ]
+}

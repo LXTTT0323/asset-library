@@ -1,0 +1,7 @@
+# the library itself
+asset-lib/
+*.pcm
+*.mp4
+__pycache__/
+.venv/
+.DS_Store
